@@ -1,0 +1,24 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: Application
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testing
+    username: postgres
+    password: psql
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      database: POSTGRESQL
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          format_sql: true
+      hibernate:
+        ddl-auto: create #I've tested create and update here; same thing
+        show-sql: true
+
+#logging:
+#  level:
+#    ROOT: DEBUG
